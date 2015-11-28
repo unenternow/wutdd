@@ -2,7 +2,7 @@
 	class FizzBuzz
 	{
 		 public static function recieve($num){
-		 	$result;
+		 	$result = $num;
 
 		 	if($num%3==0 and $num%5==0)
 		 	{
@@ -15,12 +15,7 @@
 		 	else if($num%3 == 0)
 		 	{
 		 		$result = "Fizz";
-		 	}
-		 	else
-		 	{
-		 		$result = $num;
-		 	}
-		 		
+		 	}	
 		 		return $result;
 		 }
 	}
