@@ -5,16 +5,13 @@
 		 	if($num%3==0 and $num%5==0)
 		 	{
 		 		return "FizzBuzz";
-		 	}
-		 	if($num%5 == 0)
+		 	}else if($num%5 == 0)
 		 	{
 		 		return "Buzz";
-		 	}
-		 	if($num%3 == 0)
+		 	}else if($num%3 == 0)
 		 	{
 		 		return "Fizz";
-		 	}
-		 	else
+		 	}else
 		 	{
 		 		return $num;
 		 	}
