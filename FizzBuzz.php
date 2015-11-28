@@ -2,19 +2,17 @@
 	class FizzBuzz
 	{
 		 public static function recieve($num){
-		 	$result = $num;
-
-		 	if($num%3==0 and $num%5==0)
+		 	$result = "";
+		 	if($num%3 == 0)
 		 	{
-		 		$result = "FizzBuzz";
+		 		$result .= "Fizz";
 		 	}
-		 	else if($num%5 == 0)
+		 	if($num%5 == 0)
 		 	{
-		 		$result = "Buzz";
+		 		$result .= "Buzz";
 		 	}
-		 	else if($num%3 == 0)
-		 	{
-		 		$result = "Fizz";
+		 	if($result ==""){
+		 		$result = $num;
 		 	}	
 		 		return $result;
 		 }
