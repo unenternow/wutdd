@@ -4,7 +4,7 @@
 		private $pattern;
 		private $right_operand;
 		private $left_operand;
-
+		private $operator_type;
 
 		public function getTextNumber($number_key)
 		{
@@ -40,7 +40,6 @@
 		{
 			if($this->pattern == 1 ){
 				$text_number = $this->getTextNumber($this->right_operand);
-				//$this->right_operand = 'Five';
 				return $text_number;
 			}
 			return $this->right_operand;
@@ -54,40 +53,32 @@
 
 		public function getLeftOperand()
 		{
-			if($this->pattern == 1 ){
-				$this->left_operand = 3;
+			if($this->pattern == 2 ){
+				$text_number = $this->getTextNumber($this->left_operand);
+				return $text_number;
 			}
 			return $this->left_operand;
-			
 		}
-		public function getOperator($type)
-		{
 
+		public function setOperator($type)
+		{
+			$this->operator_type=$type;
+		}
+
+		public function getOperator()
+		{
 			$opertor =[
 			1 => '+',
 			2 => '-',
 			];
-			return $opertor[$type];
+			return $opertor[$this->operator_type];
 		}
-		
 
-		// public function getQuestion($pattern_number)
-		// {
-		// 	return "1 + Five";
-		// }
+		public function result()
+		{
+			return $this->getLeftOperand() ." ". 
+					$this->getOperator()." ".
+					$this->getRightOperand()." = ?";
+		}
 
-		// public function getOperator()
-		// {
-			
-		// }
-
-		// public function getNumber()
-		// {
-			
-		// }
-
-		// public function getTextNumber()
-		// {
-			
-		//}
 	}	
